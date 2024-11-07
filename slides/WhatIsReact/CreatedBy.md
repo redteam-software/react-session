@@ -1,0 +1,1 @@
+React was created by Facebook (now Meta) in 2011.

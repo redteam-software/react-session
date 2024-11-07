@@ -1,40 +1,374 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>React Intro</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/superhero.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-gradient="linear-gradient(to right, #6a2346, #193f5e)"
+          data-background-transition="slide"
+        >
+          <h1 class="flex items-center justify-center gap-4">
+            <div class="w-[150px]" data-animate data-load="dist/react.svg">
+              <!--
+              {
+                "setup": [
+                  {
+                    "element": "#react-circle",
+                    "modifier": "function() { this.animate(1500).ease('<>').scale(.75).loop(true, true); }"
+                  },
+                  {
+                    "element": "#react-radius",
+                    "modifier": "function() { this.animate(30000).ease('-').rotate(360).loop(true); }"
+                  }
+                ]
+              }
+              -->
+            </div>
+            <div>React Intro</div>
+          </h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(to right, #193f5e, #0f2537)"
+          data-background-transition="slide"
+        >
+          <section><h2>What is React?</h2></section>
+          <section data-markdown="slides/WhatIsReact/Definition.md"></section>
+          <section data-markdown="slides/WhatIsReact/CreatedBy.md"></section>
+          <section
+            data-markdown="slides/WhatIsReact/ComponentBased.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/WhatIsReact/DeclarativeUI.md"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Why React?</h2></section>
+          <section data-markdown="slides/WhyReact/Community.md"></section>
+          <section>
+            <h2>Performance</h2>
+            <aside class="notes">
+              <ol>
+                <li>Up until now Angular, React, and Vue have been equal</li>
+                <li>React 18 introduces new renderer</li>
+                <li>
+                  React will now cache everything by default greatly improving
+                  performance
+                </li>
+              </ol>
+            </aside>
+          </section>
+          <section
+            data-auto-animate
+            data-markdown="slides/WhyReact/VirtualDOM.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/WhyReact/VirtualDOM2.md"
+          ></section>
+          <section
+            data-markdown="slides/WhyReact/EvolvingEcosystem.md"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Creating a Component</h2></section>
+          <section
+            data-markdown="slides/CreateComponent/ClassVSFunction.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component2.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component4.md"
+          ></section>
+          <section data-markdown="slides/CreateComponent/JSX.md"></section>
+          <section
+            data-background-iframe="https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=MYewdgzgLgBAsgUwhAhgcwTAvDAFASmwD4YBvAKBhgCcEoBXasGAHgAsBGIgCQQBs-IGAHUQ1PgBMWAek5EA3OQC-8oA&debug=false&forceAllTransforms=false&modules=false&shippedProposals=false&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.26.2&externalPlugins=&assumptions=%7B%7D"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component4.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component5.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component6.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/CreateComponent/Component7.md"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Rendering</h2></section>
+          <section data-markdown="slides/Rendering/Static.md"></section>
+          <section data-markdown="slides/Rendering/Data.md"></section>
+          <section data-markdown="slides/Rendering/FunctionCalls.md"></section>
+          <section data-markdown="slides/Rendering/Lists.md"></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Rendering/Conditions.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Rendering/Conditions2.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Rendering/Conditions3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Rendering/Conditions4.md"
+          ></section>
+          <section data-markdown="slides/Rendering/Conditions5.md"></section>
+          <section data-markdown="slides/Rendering/Fragments.md"></section>
+        </section>
+        <section>
+          <section><h2>Passing Data</h2></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props2.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props4.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props5.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props6.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Props/Props7.md"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Handling Events</h2></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events2.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events4.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events5.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/Events/Events6.md"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Component State</h2></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State2.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State3.md"
+          ></section>
+          <section
+            data-preload
+            data-background-iframe="https://stackblitz.com/edit/vitejs-vite-nxae1h?embed=1&file=src%2FApp.tsx"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State4.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State5.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State6.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State7.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/StateManagement/State8.md"
+          ></section>
+          <section
+            data-preload
+            data-background-iframe="https://stackblitz.com/edit/vitejs-vite-gckyzb?embed=1&file=src%2FApp.tsx"
+          ></section>
+        </section>
+        <section>
+          <section><h2>Side Effects</h2></section>
+          <section data-markdown="slides/SideEffects/Pure.md"></section>
+          <section data-markdown="slides/SideEffects/React.md"></section>
+          <section data-markdown="slides/SideEffects/SideEffect.md"></section>
+          <section data-markdown="slides/SideEffects/SideEffect2.md"></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect3.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect4.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect5.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect6.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect7.md"
+          ></section>
+          <section
+            data-auto-animate
+            data-markdown="slides/SideEffects/SideEffect8.md"
+          ></section>
+        </section>
+        <section>
+          <section class="!flex flex-col items-center">
+            <h2>Troubleshooting</h2>
+            <img class="r-stretch" src="https://i.redd.it/lvkgddgu6lh41.jpg" />
+          </section>
+          <section
+            class="middle"
+            data-background-iframe="https://react.dev/learn"
+            data-markdown="slides/TroubleShooting/Documentation.md"
+            data-preload
+          ></section>
+          <section
+            class="middle"
+            data-background-iframe="https://react.dev/learn/react-developer-tools"
+            data-markdown="slides/TroubleShooting/DevTools.md"
+            data-preload
+          ></section>
+          <section
+            data-background-iframe="https://www.youtube.com/embed/Qwb-Za6cBws?si=A3IMOK_rMeUumj75&start=475&autoplay=1&controls=0&mute=1"
+            data-background-video-muted
+            data-background-transition="fade"
+            data-markdown="slides/TroubleShooting/Profiling.md"
+          ></section>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(to right, #0f2537, #193f5e)"
+        >
+          <h1>Questions?</h1>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/animate/plugin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/editor/editor.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        hashOneBasedIndex: true,
+        chart: {
+          defaults: {
+            color: "white", // color of labels
+            scale: {
+              beginAtZero: true,
+              ticks: { stepSize: 1 },
+              grid: { color: "#df6919" }, // color of grid lines
+            },
+          },
+          bar: {
+            backgroundColor: [
+              "rgb(20,220,220)",
+              "rgb(220,120,120)",
+              "rgb(20,120,220)",
+            ],
+          },
+        },
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealZoom,
+          RevealChart,
+          RevealLoadContent,
+          RevealAnimate,
+          Editor,
+        ],
+      });
+    </script>
+  </body>
 </html>
